@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Gestion commandes</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head><!--/head-->
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+	<header id="header" role="banner">
+		<div class="container">
+			<div id="navbar" class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
+						<li><a href="#sandwiches"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Sandwichs</a></li>
+						<li><a href="#pizza"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Pizzas</a></li>
+						<li><a href="#desserts"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Desserts</a></li>
+						<li><a href="#cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Panier</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header><!--/#header-->
+
+	<section id="main-slider" class="carousel">
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="container">
+					<div class="carousel-content">
+						<h1>Levallois Food</h1>
+						<p class="lead">57 rue Victor Hugo, 92300 Levallois-Perret</p>
+					</div>
+				</div>
+			</div><!--/.item-->
+		</div><!--/.carousel-inner-->
+		<a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
+		<a class="next" href="#main-slider" data-slide="next"><i class="icon-angle-right"></i></a>
+	</section><!--/#main-slider-->
+
+	<section id="sandwiches">
+		<div class="container">
+			<div class="box">
+				<div class="center gap">
+					<h2>Sandwichs</h2>
+					<hr/>
+					<div class="container">
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/hamburger.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Sandwich Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success"onclick="openModal('id')">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div><!--/.center-->                
+			</div><!--/.box-->
+		</div><!--/.container-->
+	</section><!--/#portfolio-->
+	<br/><br/>
+	<section id="pizza">
+		<div class="container">
+			<div class="box">
+				<div class="center gap">
+					<h2>Pizzas</h2>
+					<hr/>
+					<div class="container">
+
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/pizza.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Pizza Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/pizza.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Pizza Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/pizza.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Pizza Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+							<div class="card">
+								<div class="card-image">
+									<img class="img-responsive" src="images/pizza.jpeg">
+
+								</div><!-- card image -->
+
+								<div class="card-content">
+									<span class="card-title">Pizza Rami</span>                    
+									<button type="button" id="show" class="btn btn-custom pull-right" aria-label="Left Align">
+										<i class="fa fa-ellipsis-v"></i>
+									</button>
+								</div><!-- card content -->
+								<div class="card-action">
+									Prix : 5.50€
+									<br/>
+									<br/>
+									<button class="btn btn-success">Ajouter au panier</button>
+								</div><!-- card actions -->
+								<div class="card-reveal">
+									<span class="card-title">Card Title</span> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+									<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								</div><!-- card reveal -->
+							</div>
+						</div>
+
+
+					</div>
+				</div><!--/.center-->                
+			</div><!--/.box-->
+		</div><!--/.container-->
+	</section><!--/#portfolio-->
+
+	<div class="modal fade" id="orderModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content" style="text-align:center">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">{{Food name}}</h4>
+				</div>
+				<div class="modal-body">
+					<p>{{Food description}}</p>
+					<form class="form-horizontal">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend>Options</legend>
+
+							<!-- Select Basic -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="selectSauce">Sauce</label>
+								<div class="col-md-4">
+									<select id="selectSauce" name="selectSauce" class="form-control">
+										<option value="1">Algerienne</option>
+										<option value="2">Samourai</option>
+										<option value="3">Tunisienne</option>
+										<option value="4">Ketchup</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Multiple Checkboxes -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="selectOptions">Compléments</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="selectOptions-0">
+											<input type="checkbox" name="selectOptions" id="selectOptions-0" value="1">
+											Salade
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="selectOptions-1">
+											<input type="checkbox" name="selectOptions" id="selectOptions-1" value="2">
+											Tomates
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="selectOptions-2">
+											<input type="checkbox" name="selectOptions" id="selectOptions-2" value="3">
+											Oignon
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- Select Basic -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="selectBoisson">Boisson</label>
+								<div class="col-md-4">
+									<select id="selectBoisson" name="selectBoisson" class="form-control">
+										<option value="1">Coca-Cola</option>
+										<option value="2">Fanta</option>
+										<option value="3">Ice-tea</option>
+									</select>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+					<br/>
+					<button class="btn btn-success">Ajouter au panier</button>
+				</div>
+				<div class="modal-footer" style="text-align:center">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					&copy; 2016 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Levallois Food</a>. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+	</footer><!--/#footer-->
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+<script>
+	function openModal(id)
+	{
+		$('#orderModal').modal();
+	}
+</script>
+</html>
