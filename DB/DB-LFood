@@ -1,0 +1,49 @@
+DROP DATABASE LFood
+CREATE DATABASE LFood
+
+create table Sandwichs
+(
+idSandwich int primary key AUTO_INCREMENT,
+nomSandwich nvarchar(255) not null,
+desSandwich nvarchar(255) not null,
+prixSandwich int not null,
+imageSanswich nvarchar(255) not null
+);
+
+create table Pizza
+(
+idPizza int primary key AUTO_INCREMENT,
+nomPizza nvarchar(255) not null,
+desPizza nvarchar(255) not null,
+prixPizza int not null,
+imagePizza nvarchar(255) not null
+);
+
+create table Sauces
+(
+idSauce int primary key AUTO_INCREMENT,
+nomSauce nvarchar(255) not null,
+imageSauce nvarchar(255) not null
+);
+
+
+create table Ingredients
+(
+idIngredient int primary key AUTO_INCREMENT,
+nomIngredient nvarchar(255) not null
+);
+
+create table Boissons
+(
+idBoisson int primary key AUTO_INCREMENT,
+nomBoisson nvarchar(255) not null,
+desBoisson nvarchar(255) not null,
+imageBoisson nvarchar(255) not null
+);
+
+create table Commandes
+(
+idCommande int primary key AUTO_INCREMENT,
+total int not null,
+dateCommande date NOT NULL DEFAULT '0000-00-00'
+);
