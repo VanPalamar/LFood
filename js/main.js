@@ -1,55 +1,102 @@
-jQuery(function($) {
+var cart = [];
 
-	$(function(){
-		$('#main-slider.carousel').carousel({
-			interval: 10000,
-			pause: false
-		});
+init();
+
+function init(){
+	var c = Cookies.get("cart");
+	if(typeof(c) !== "undefined"){
+		var d = JSON.parse(c);
+		cart = d;
+		updateCart();
+	}
+}
+
+function addPizzaToCart(form){
+
+	var $inputs = form.find(':input');
+
+	var values = {};
+	$inputs.each(function() {
+		values[this.name] = $(this).val();
 	});
 
-	//Ajax contact
-	var form = $('.contact-form');
-	form.submit(function () {
-		$this = $(this);
-		$.post($(this).attr('action'), function(data) {
-			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-		},'json');
-		return false;
+	var drink = values["selectBoisson"];
+	var price = values["price"];
+	var quantity = values["selectQuantity"];
+	var category = values["category"];
+
+	var meal = {"drink":drink, "price":price,"quantity":quantity, "category":category};
+	cart.push(meal);
+	updateCart();
+	notify("Produit ajouté au panier");
+}
+
+
+function addSandwichToCart(form){
+
+	var $inputs = form.find(':input');
+
+	var values = {};
+	$inputs.each(function() {
+		values[this.name] = $(this).val();
 	});
 
-	//smooth scroll
-	$('.navbar-nav > li').click(function(event) {
-		event.preventDefault();
-		var target = $(this).find('>a').prop('hash');
-		$('html, body').animate({
-			scrollTop: $(target).offset().top
-		}, 500);
+	var options = [];
+
+	form.find(":input:checkbox:checked").each(function() {
+		options.push($(this).val());
 	});
 
-	//scrollspy
-	$('[data-spy="scroll"]').each(function () {
-		var $spy = $(this).scrollspy('refresh')
-	})
+	var sauce = values["selectSauce"];
+	var drink = values["selectBoisson"];
+	var price = values["price"];
+	var quantity = values["selectQuantity"];
+	var category = values["category"];
 
-	//PrettyPhoto
-	$("a.preview").prettyPhoto({
-		social_tools: false
-	});
+	var meal = {"sauce":sauce, "drink":drink, "price":price,"quantity":quantity, "options":options, "category":category};
+	cart.push(meal);
+	updateCart();
+	notify("Produit ajouté au panier");
+}
 
-	//Isotope
-	$(window).load(function(){
-		$portfolio = $('.portfolio-items');
-		$portfolio.isotope({
-			itemSelector : 'li',
-			layoutMode : 'fitRows'
-		});
-		$portfolio_selectors = $('.portfolio-filter >li>a');
-		$portfolio_selectors.on('click', function(){
-			$portfolio_selectors.removeClass('active');
-			$(this).addClass('active');
-			var selector = $(this).attr('data-filter');
-			$portfolio.isotope({ filter: selector });
-			return false;
-		});
-	});
+
+function updateCart(){
+	var price = 0;
+	for(var i = 0; i < cart.length; i++){
+		price += cart[i].quantity * cart[i].price;
+	}
+	Cookies.set("cart", cart);
+	$("#cartTotal").html(price);
+}
+
+function notify(msg, level){
+	$.notify(msg, typeof(level) === "undefined" ? "success" : level);
+}
+
+function openModal(id)
+{
+	$('#orderModal').modal();
+}
+
+$("#emptyCartButton").click(function(){
+	if(cart.length === 0)return;
+	cart = [];
+	updateCart();
+	notify("Panier vidé", "info");
 });
+
+$('form').on('submit', function (e) {
+	var form = $(this);
+
+	if(form.hasClass("pizzaForm")){
+		addPizzaToCart(form);
+		e.preventDefault();
+	} else if(form.hasClass("sandwichForm")){
+		addSandwichToCart(form);
+		e.preventDefault();
+	}
+
+	console.log("suvmit");
+	
+});
+
