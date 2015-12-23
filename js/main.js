@@ -24,8 +24,31 @@ function addPizzaToCart(form){
 	var price = values["price"];
 	var quantity = values["selectQuantity"];
 	var category = values["category"];
+	var id = values["id"];
 
 	var meal = {"drink":drink, "price":price,"quantity":quantity, "category":category};
+	cart.push(meal);
+	updateCart();
+	notify("Produit ajouté au panier");
+}
+
+function addToCart(form){
+
+	var $inputs = form.find(':input');
+
+	var values = {};
+	$inputs.each(function() {
+		values[this.name] = $(this).val();
+	});
+
+	var options = [];
+
+	form.find(":input:checkbox:checked").each(function() {
+		options.push($(this).val());
+	});
+
+
+	var meal = {"options":options, "values":values};
 	cart.push(meal);
 	updateCart();
 	notify("Produit ajouté au panier");
@@ -52,6 +75,7 @@ function addSandwichToCart(form){
 	var price = values["price"];
 	var quantity = values["selectQuantity"];
 	var category = values["category"];
+	var id = values["id"];
 
 	var meal = {"sauce":sauce, "drink":drink, "price":price,"quantity":quantity, "options":options, "category":category};
 	cart.push(meal);
@@ -63,7 +87,7 @@ function addSandwichToCart(form){
 function updateCart(){
 	var price = 0;
 	for(var i = 0; i < cart.length; i++){
-		price += cart[i].quantity * cart[i].price;
+		price += cart[i].values.quantity * cart[i].values.price;
 	}
 	Cookies.set("cart", cart);
 	$("#cartTotal").html(price);
@@ -88,14 +112,9 @@ $("#emptyCartButton").click(function(){
 $('form').on('submit', function (e) {
 	var form = $(this);
 
-	if(form.hasClass("pizzaForm")){
-		addPizzaToCart(form);
-		e.preventDefault();
-	} else if(form.hasClass("sandwichForm")){
-		addSandwichToCart(form);
-		e.preventDefault();
-	}
+	addToCart(form);
 
+	e.preventDefault();
 	console.log("suvmit");
 	
 });
