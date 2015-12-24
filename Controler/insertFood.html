@@ -1,0 +1,83 @@
+<?php
+ include ("functions.php");
+$bdd = connect_bdd();
+    echo '
+    <br>
+ <h3> ajouter pizza</h3><br>
+  <form method="POST" action="Insert_Pizza.php" name="ajouter pizza">
+    <label for="nomPizza">nom: </label>
+     <input  name="nomPizza"  type="text"/></br><br>
+    <label for="desPizza">description: </label>
+     <input  name="desPizza" type="text" /></br><br>
+    <label for="prixPizza">prix : </label>
+     <input  name="prixPizza"  type="text"/></br><br>
+    <label for="imagePizza">Lien image : </label>
+     <input  name="imagePizza" type="text"/> </br><br>
+    
+    <p>
+     <input type="submit" value="Valider" class="valider" />
+    </p>
+ 
+    </form>
+    <br>
+
+ 
+    <h3> ajouter sandwich</h3><br>
+ 
+  <form method="POST" action="Insert_Sandwich.php" name="ajouter sandwich">
+    <label for="nomSandwich">nom: </label>
+     <input  name="nomSandwich"  type="text"/></br><br>
+    <label for="desSandwich">description: </label>
+     <input  name="desSandwich" type="text" /></br><br>
+    <label for="prixSandwich">prix: </label>
+     <input  name="prixSandwich"  type="text"/></br><br>
+    <label for="imageSandwich">Lien image : </label>
+     <input  name="imageSandwich" type="text"/> </br><br>
+    
+    <p>
+     <input type="submit" value="Valider" class="valider" />
+    </p>
+ 
+    </form>
+    <br>
+
+  <h3> ajouter sauce</h3><br>
+  <form method="POST" action="Insert_Sauce.php" name="ajouter Sauce">
+    <label for="nomSauce">nom: </label>
+     <input  name="nomSauce"  type="text"/></br><br>
+    <label for="imageSauce">Lien image : </label>
+     <input  name="imageSauce" type="text"/> </br><br>
+    
+    <p>
+     <input type="submit" value="Valider" class="valider" />
+    </p>
+ 
+    </form>
+    <br>
+
+  <h3> ajouter ingredient</h3><br>
+  <form method="POST" action="Insert_Ingredients.php" name="ajouter ingredient">
+    <label for="nomIngredient">nom: </label>
+     <input  name="nomIngredient"  type="text"/></br><br>
+    <p>
+     <input type="submit" value="Valider" class="valider" />
+    </p>
+ 
+    </form>
+    <br>
+
+ <h3> ajouter boisson</h3><br>
+  <form method="POST" action="Insert_Boisson.php" name="ajouter boisson">
+    <label for="nomBoisson">nom: </label>
+     <input  name="nomBoisson"  type="text"/></br><br>
+    <label for="desBoisson">description: </label>
+     <input  name="desBoisson" type="text" /></br><br>
+     <label for="imageBoisson">Lien image : </label>
+     <input  name="imageBoisson" type="text"/> </br><br>
+    <p>
+     <input type="submit" value="Valider" class="valider" />
+    </p>
+ 
+    </form>
+    <br>';
+?>

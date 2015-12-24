@@ -1,5 +1,6 @@
 DROP DATABASE LFood
 CREATE DATABASE LFood
+USE LFood
 
 create table Sandwichs
 (
