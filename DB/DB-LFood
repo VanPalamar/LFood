@@ -7,7 +7,7 @@ idSandwich int primary key AUTO_INCREMENT,
 nomSandwich nvarchar(255) not null,
 desSandwich nvarchar(255) not null,
 prixSandwich int not null,
-imageSanswich nvarchar(255) not null
+imageSandwich nvarchar(255) not null
 );
 
 create table Pizza

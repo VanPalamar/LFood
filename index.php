@@ -32,6 +32,7 @@
 	}
 	include("/includes/navbar-bottom.php");
 	?>
+	
 
 
 </body>
